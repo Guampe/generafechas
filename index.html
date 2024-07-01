@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeneraFechas 😁</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Calcular Cumpleaños Común</h1>
+    <div id="input-container"></div>
+    <div id="title-container">
+        <input type="text" id="specialTitle" placeholder="Título o nombre de tu fecha especial" />
+    </div>
+    <div id="button-container">
+        <button class="action-button" onclick="addDateInput()">Añadir otra fecha</button>
+        <button class="action-button" onclick="calculateCommonBirthday()">Calcular</button>
+    </div>
+    <p id="result"></p>
+    <button class="action-button" id="generate-button" style="display: none;" onclick="generateImageWithMessage()">Generar Imagen</button>
+    <div id="generate-image-container" style="display: none;">
+        <h4>Selecciona o puedes cargar una imagen para personalizar tu fondo</h4>
+        <div id="upload-container">
+            <input type="file" id="customImageUpload" accept="image/*" onchange="handleImageUpload(event)" />
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-button" id="prevButton">&#10094;</button>
+            <div class="carousel">
+                <!-- Imágenes del carrusel se cargarán dinámicamente desde main.js -->
+            </div>
+            <button class="carousel-button" id="nextButton">&#10095;</button>
+        </div>
+        <div id="resultImage">
+            <!-- Aquí se mostrará la imagen generada -->
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
